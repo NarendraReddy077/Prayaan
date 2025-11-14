@@ -12,15 +12,12 @@
 <body>
   <header>
     <div class="header-container">
-      <!-- Hamburger Menu - Now at leftmost corner -->
+      <!-- Hamburger Menu -->
       <div id="hamburger" class="hamburger" onclick="toggleSidebar()">
         <div></div>
         <div></div>
         <div></div>
       </div>
-
-      <!-- Logo -->
-      <a href="{% url 'index' %}" class="logo">Drive<span>Easy</span></a>
 
       <!-- Search Bar -->
       <form action="{% url 'cars' %}" method="get" class="search-form">
@@ -33,28 +30,34 @@
       <!-- Top Nav -->
       <nav>
         <ul>
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'cars' %}">Cars</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> <span>Home</span></a></li>
+          <li><a href="{% url 'cars' %}"><i class="fas fa-car"></i> <span>Cars</span></a></li>
+          <li><a href="{% url 'about' %}"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
           {% if user.is_authenticated %}
             <li class="user-welcome">Welcome {{ user.username }}</li>
             {% if user.is_superuser %}
-            <li><a href="{% url 'admin_dashboard' %}">DashBoard</a></li>
+            <li><a href="{% url 'admin_dashboard' %}"><i class="fas fa-tachometer-alt"></i> <span>DashBoard</span></a></li>
             {% else %}
-            <li><a href="{% url 'booked_cars' %}">Booked Cars</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'booked_cars' %}"><i class="fas fa-bookmark"></i> <span>Booked Cars</span></a></li>
+            <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
             {% endif %}
           {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>
+            <li><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> <span>Register</span></a></li>
           {% endif %}
         </ul>
       </nav>
+
+      <!-- Logo -->
+      <div class="logo-section">
+        <img src="https://res.cloudinary.com/dc9ofdtip/image/upload/v1763115275/Untitled_design_2_ljo2is.png" alt="Prayaan Logo" class="logo-img">
+      </div>
     </div>
   </header>
+  
 
-  <div id="sidebar">
+  <div id="sidebar" style="background-color: white;color: white;">
     <div class="sidebar-header">
       <h3><i class="fas fa-car"></i> PRAYAAN Menu</h3>
     </div>

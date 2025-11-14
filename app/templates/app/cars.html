@@ -1,13 +1,13 @@
 {% extends "app/base.html" %}
 
-{% block title %}Cars - DriveEasy{% endblock %}
+{% block title %}Cars - PRAYAAN{% endblock %}
 
 {% block content %}
 <!-- Featured Cars -->
-<section id="cars" class="section">
+<section id="cars" class="section" style="background-color: #bce3c2;">
     <div class="container">
         <div class="section-title">
-            <h2>Our Fleet</h2>
+            <h2>Our Garage</h2>
             <p>Explore our collection of vehicles suitable for any occasion</p>
         </div>
         
@@ -21,8 +21,8 @@
         
         <div class="cars-grid">
             {% for car in cars %}
-            <div class="car-card">
-                <div class="car-img">
+            <div class="car-card" style="background-color: #aadb95;">
+                <div class="car-img" style="margin: 10px;width:348px;border-radius: 10px;">
                     {% load car_extras %}
                     {% car_image_url car as image_url %}
                     <img src="{{ image_url }}" alt="{{ car.category }} {{ car.ac_type }}" style="width: 100%; height: 250px; object-fit: cover;">

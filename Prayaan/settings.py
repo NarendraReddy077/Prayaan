@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Easy.urls'
+ROOT_URLCONF = 'Prayaan.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Easy.wsgi.application'
+WSGI_APPLICATION = 'Prayaan.wsgi.application'
 
 
 # Database

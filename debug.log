@@ -16579,3 +16579,57 @@ User narendra logged in successfully
 "GET /about/ HTTP/1.1" 200 10414
 "GET /booked-cars/ HTTP/1.1" 200 15896
 "GET / HTTP/1.1" 200 6018
+"GET / HTTP/1.1" 200 6018
+"GET /static/app/css/style.css HTTP/1.1" 304 0
+"GET /static/app/css/h_style.css HTTP/1.1" 304 0
+"GET /static/app/js/h.js HTTP/1.1" 304 0
+"GET /static/app/js/script.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 6018
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6018
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 10572
+"GET /return-cars/ HTTP/1.1" 200 15682
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 1303
+"GET /static/app/css/l_style.css HTTP/1.1" 304 0
+"GET /static/js/app.js HTTP/1.1" 404 1841
+"GET /static/app/images/car_bg.png HTTP/1.1" 304 0
+User admin logged in successfully
+"POST /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 6003
+"GET /drivers/ HTTP/1.1" 200 10217
+"GET /media/drivers/driver1.jpg HTTP/1.1" 304 0
+"GET /media/drivers/hareesh.jpg HTTP/1.1" 304 0
+"GET /media/drivers/balaji.jpg HTTP/1.1" 304 0
+"GET /media/drivers/anil.jpg HTTP/1.1" 304 0
+"GET /media/drivers/driver2.jpg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 6003
+"GET /staff/admin-dashboard/ HTTP/1.1" 200 16588
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6003
+"GET / HTTP/1.1" 200 6003
+"GET /static/app/css/style.css HTTP/1.1" 304 0
+"GET /static/app/css/h_style.css HTTP/1.1" 304 0
+"GET /static/app/js/h.js HTTP/1.1" 304 0
+"GET /static/app/js/script.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 10572
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 10572
+"GET / HTTP/1.1" 200 6003
+"GET /drivers/ HTTP/1.1" 200 10217
+"GET /media/drivers/driver1.jpg HTTP/1.1" 304 0
+"GET /media/drivers/balaji.jpg HTTP/1.1" 304 0
+"GET /media/drivers/driver2.jpg HTTP/1.1" 304 0
+"GET /media/drivers/anil.jpg HTTP/1.1" 304 0
+"GET /media/drivers/hareesh.jpg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 6003
+"GET /cars/ HTTP/1.1" 200 18221
+"GET /media/cars/Ambassador_vvOyszO.jpg HTTP/1.1" 304 0
+"GET /media/cars/The-TATA-Sumo_yHFYcki.jpg HTTP/1.1" 304 0
+"GET /media/cars/mahindra-armada_qf97ac1.jpg HTTP/1.1" 304 0
+"GET /media/cars/maruti-suzuki-esteem_HBmwkk6.jpg HTTP/1.1" 304 0
+"GET /media/cars/maruti-suzuki-omni_T6SIhLh.jpg HTTP/1.1" 304 0
+Watching for file changes with StatReloader
