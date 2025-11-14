@@ -16,16 +16,26 @@
   --radius: 12px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
    --primary: #2c3e50;
-            --secondary: #e74c3c;
+            --secondary: #00ff2f;
             --light: #ecf0f1;
             --dark: #34495e;
             --success: #27ae60;
 }
 
 .returned-cars-container {
+  /* make background full-width while keeping content centered */
+  width: 100%;
+  max-width: 100%;
+  margin: 0; /* remove auto centering so bg spans edge-to-edge */
+  padding: 2rem 0; /* vertical padding; horizontal padding handled by inner wrapper */
+  box-sizing: border-box;
+}
+
+.returned-cars-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem; /* horizontal gutter for content */
+  box-sizing: border-box;
 }
 
 /* ====== TYPOGRAPHY ====== */
@@ -444,8 +454,8 @@
 }
 </style>
 
-<div class="returned-cars-container">
-  <h1 class="page-title">Returned Cars</h1>
+<div class="returned-cars-container" style="background-color: #bce3c2;padding: 40px;">
+  <h1 class="page-title" style="color:rgb(4, 122, 4) ;">Returned Cars</h1>
 
   <!-- Filter Controls -->
   <div class="filter-controls">
@@ -461,7 +471,7 @@
       {% for booking in bookings %}
         <div class="booking-card" data-drive-type="{{ booking.drive_type }}" data-damage="{{ booking.damage_reported|yesno:'true,false' }}" data-pending="{{ booking.pending_payment|yesno:'true,false' }}">
           <!-- Car Image -->
-          <div class="booking-image-container">
+          <div class="booking-image-container" style="margin:10px; border-radius: 10px;">
             <img src="{{ booking.car.image.url }}" class="booking-image" alt="{{ booking.car.category }}">
             <div class="booking-badge">
               <i class="fas fa-check-circle"></i>  Returned

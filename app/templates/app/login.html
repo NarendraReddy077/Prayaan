@@ -7,9 +7,9 @@
   <title>Login</title>
   <link rel="stylesheet" href="{% static 'app/css/l_style.css' %}" />
 </head>
-<body style="background: url('{% static 'app/images/car_bg.png' %}') no-repeat center center/cover; min-height: 100vh;">
+<body style="background: url('https://res.cloudinary.com/dc9ofdtip/image/upload/v1763119201/Untitled_design_3_vn11tf.png') no-repeat center center/cover; min-height: 100vh;">
   <div class="form-container">
-    <h2>Login</h2>
+    <h2 style="color: #021814;font-size:32px;">Login</h2>
     
     {% if messages %}
         <div style="margin-bottom: 15px;">
@@ -38,7 +38,7 @@
         </label>
       </div>
 
-      <button type="submit">Login</button>
+      <button type="submit" style="background-color: #2a3c37;">Login</button>
       <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
     </form>
   </div>

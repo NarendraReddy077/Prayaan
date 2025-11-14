@@ -1,13 +1,14 @@
+<div style="background-color: #bce3c2;">
 {% extends 'app/base.html' %}
 {% block title %}Drivers{% endblock %}
 
 {% block content %}
-<h2>Drivers List</h2>
+<h2 style="text-align: center;font-size:32px;margin-top: 15px;">Drivers List</h2>
 
 {% if drivers %}
-    <div id="driversContainer">
+    <div id="driversContainer" style="margin: 30px;">
         {% for driver in drivers %}
-            <div class="driver-card">
+            <div class="driver-card" style="background-color: #dffde4;">
                 {% if driver.image %}
                     <img src="{{ driver.image.url }}" width="150" alt="{{ driver.name }}">
                 {% else %}
@@ -30,7 +31,8 @@
     <p>No drivers available.</p>
 {% endif %}
 
-<a href="{% url 'index' %}" class="back-btn">← Dashboard</a>
+<a href="{% url 'index' %}" class="back-btn" style="margin: 30px;">← Dashboard</a>
+</div>
 <style>
 /* Container and cards */
 #driversContainer {

@@ -19,7 +19,7 @@
 
 
      --primary: #2c3e50;
-            --secondary: #e74c3c;
+            --secondary: #02643d;
             --light: #ecf0f1;
             --dark: #34495e;
             --success: #27ae60;
@@ -431,7 +431,7 @@
 }
 </style>
 
-<div class="booking-history-container" style="background-color: #bce3c2;">
+<div class="booking-history-container" style="border-radius: 20px;background-color: #bce3c2;">
   <h1 class="booking-history-title">My Booked Cars</h1>
   <p class="booking-history-subtitle">Manage and track your vehicle rentals</p>
 
@@ -450,8 +450,8 @@
   {% if bookings %}
     <div class="booking-grid">
       {% for booking in bookings %}
-        <div class="booking-card">
-          <div class="card-header">
+        <div class="booking-card" style="background-color: #e9f7eb;">
+          <div class="card-header" style="background-color: #e9f7eb;">
             <h3 class="section-title">Booking #{{ booking.id }}</h3>
             <div class="booking-status-badge {% if booking.is_returned %}status-returned{% else %}status-ongoing{% endif %}">
               <i class="fas fa-{% if booking.is_returned %}check-circle{% else %}clock{% endif %}"></i>

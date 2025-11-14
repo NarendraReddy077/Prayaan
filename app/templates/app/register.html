@@ -7,9 +7,9 @@
   <title>Register</title>
   <link rel="stylesheet" href="{% static 'app/css/l_style.css' %}" />
 </head>
-<body style="background: url('{% static 'app/images/car_bg.png' %}') no-repeat center center/cover; min-height: 100vh;">
+<body style="background: url('https://res.cloudinary.com/dc9ofdtip/image/upload/v1763119201/Untitled_design_3_vn11tf.png') no-repeat center center/cover; min-height: 100vh;">
   <div class="form-container">
-    <h2>Register</h2>
+    <h2 style="color: #021814;font-size:32px;">Register</h2>
     
     {% if user.is_authenticated %}
         <div style="padding: 15px; border-radius: 4px; margin-bottom: 15px; background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7;">
@@ -38,7 +38,7 @@
           <input type="email" name="email" placeholder="Email" required />
           <input type="password" name="password1" placeholder="Password" required />
           <input type="password" name="password2" placeholder="Confirm Password" required />
-          <button type="submit">Register</button>
+          <button type="submit" style="background-color: #2a3c37;">Register</button>
           <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
         </form>
     {% endif %}
