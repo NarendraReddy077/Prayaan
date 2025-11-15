@@ -45,7 +45,7 @@ Prayaan/
 ├─ media/
 ├─ manage.py
 ├─ populate_cars.py
-├─ requirements-min.txt
+├─ requirements.txt
 └─ CAR_CRUD_CURL.md
 ```
 
