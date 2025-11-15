@@ -579,8 +579,12 @@ def staff_returned_cars_mark(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     
     if request.method == "POST":
+        # Check if damage was reported
+        damage_reported = request.POST.get("damage_reported")
+        booking.damage_reported = bool(damage_reported)
+        
         damage_fee = request.POST.get("damage_fee")
-        if damage_fee:
+        if damage_fee and booking.damage_reported:
             booking.damage_fee = Decimal(damage_fee)
             booking.pending_payment += Decimal(damage_fee)
 
