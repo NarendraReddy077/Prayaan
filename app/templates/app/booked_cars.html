@@ -74,16 +74,18 @@
 .booking-card {
   background: white;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   overflow: hidden;
   transition: var(--transition);
-  border: 1px solid var(--border);
+  /* only top border visible */
+  border: none;
+  border-top: 4px solid #02643d;
   margin-bottom: 2rem;
+  box-shadow: none;
 }
 
 .booking-card:hover {
-  box-shadow: var(--shadow-lg);
   transform: translateY(-3px);
+  box-shadow: none;
 }
 
 .card-header {

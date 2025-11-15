@@ -119,26 +119,25 @@
 .booking-card {
   background: white;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   overflow: hidden;
   transition: var(--transition);
-  border: 1px solid var(--border);
   position: relative;
+  border-top: 2px solid #02643d; /* only top solid border */
 }
 
 .booking-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
 }
 
 .booking-card::before {
+  /* keep a simple solid top bar for legacy layout, but match requested color */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--success), #059669);
+  height: 2px;
+  background: #02643d;
 }
 
 .booking-image-container {
@@ -469,7 +468,7 @@
   {% if bookings %}
     <div class="bookings-grid">
       {% for booking in bookings %}
-        <div class="booking-card" data-drive-type="{{ booking.drive_type }}" data-damage="{{ booking.damage_reported|yesno:'true,false' }}" data-pending="{{ booking.pending_payment|yesno:'true,false' }}">
+        <div class="booking-card" style="border-top: 2px solid #02643d;" data-drive-type="{{ booking.drive_type }}" data-damage="{{ booking.damage_reported|yesno:'true,false' }}" data-pending="{{ booking.pending_payment|yesno:'true,false' }}">
           <!-- Car Image -->
           <div class="booking-image-container" style="margin:10px; border-radius: 10px;">
             <img src="{{ booking.car.image.url }}" class="booking-image" alt="{{ booking.car.category }}">

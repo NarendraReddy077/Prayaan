@@ -85,13 +85,14 @@
         background: white;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: none; /* remove surrounding shadow */
+        border-top: 4px solid #02643d; /* only top solid border */
+        transition: transform 0.3s ease;
     }
-    
+
     .car-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        /* intentionally no shadow to keep only top border visible */
     }
     
     .car-img {
