@@ -27,7 +27,7 @@ git clone https://github.com/NarendraReddy077/Prayaan.git
 cd Prayaan
 python -m venv venv
 source venv/bin/activate    # Windows: venv\Scripts\activate
-pip install -r requirements-min.txt
+pip install -r requirements.txt
 ```
 
 ## Running the App
